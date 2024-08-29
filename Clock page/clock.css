@@ -1,0 +1,277 @@
+/* ANALOG SIDE */
+
+.analog-gen-div {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(214, 189, 136);
+}
+
+.clock-circle {
+    width: 32%;
+    height: 70%;
+    border: solid 2px black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.center-point {
+    font-size: 100px;
+    margin-bottom: 59px;
+    z-index: 2;
+}
+
+.cover1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#minute-hand {
+    width: 8px;
+    height: 170px;
+    position: absolute;
+    bottom: 50%;
+    background-color: black;
+    z-index: 1;
+    transform-origin: bottom center;
+    transform: rotate(330deg);
+}
+
+#hour-hand {
+    width: 8px;
+    height: 120px;
+    position: absolute;
+    bottom: 50%;
+    background-color: black;
+    z-index: 1;
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+}
+
+#sec-hand {
+    width: 2px;
+    height: 150px;
+    position: absolute;
+    bottom: 50%;
+    background-color: red;
+    z-index: 1;
+    transform-origin: bottom center;
+    transform: rotate(30deg);
+}
+
+.number-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* background-color: red; */
+}
+
+.number-div h1 {
+    position: absolute;
+    font-size: 30px;
+    transform-origin: center;
+}
+
+.twelve {
+    top: -3%;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(0deg);
+}
+
+.one {
+    top: 13%;
+    right: 25%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.two {
+    top: 29%;
+    right: 8%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.three {
+    top: 50%;
+    right: 3%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.four {
+    bottom: 21%;
+    right: 8%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.five {
+    bottom: 5%;
+    right: 23%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.six {
+    bottom: -1%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.seven {
+    bottom: 5%;
+    left: 27%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.eight {
+    bottom: 21%;
+    left: 11%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.nine {
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.ten {
+    top: 28%;
+    left: 11%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+.eleven {
+    top: 12%;
+    left: 27%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/* DIGITAL DIV  */
+
+#digital-gen-div {
+    position: absolute;
+    bottom: 20%;
+    /* left: 165px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* border: solid 2px black; */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(173, 169, 169);
+    
+}
+
+#digital-gen-div div p {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* DATE DIV  */
+
+#date-div {
+    position: absolute;
+    top: 20%;
+    /* left: 140px; */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(173, 169, 169);
+    display: flex;
+    justify-content: center;
+}
+
+#date-div p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* MEDIA QUERY */
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .clock-circle {
+        width: 95%;
+        height: 62%;
+    }
+
+    #minute-hand {
+        height: 130px;
+        width: 7px;
+    }
+
+    #hour-hand {
+        height: 100px;
+        width: 7px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1114px) {
+    .clock-circle {
+        width: 80%;
+    }
+
+    #minute-hand {
+        height: 190px;
+    }
+
+    #hour-hand {
+        height: 140px;
+    }
+
+    #sec-hand {
+        height: 170px;
+    }
+
+    #digital-gen-div div p {
+        font-size: 20px;
+    }
+
+    #date-div p {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 162px) and (max-width: 319px) {
+    .center-point {
+        display: none;
+    }
+
+    .cover1 {
+        display: none;
+    }
+
+    .number-div {
+        display: none;
+    }
+
+    .clock-circle {
+        border: none;
+    }
+
+    #digital-gen-div {
+        bottom: 0;
+    }
+
+    #date-div  {
+        top: 10%;
+    }
+
+    #date-div p {
+        /* font-size: 14px; */
+        white-space: nowrap;
+    }
+}

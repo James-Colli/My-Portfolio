@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, arial;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../Fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url(../Fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+nav {
+    /* background-color: rgb(20, 15, 4); */
+    background-color: transparent;
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding: 1rem 3rem;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+nav.scrolled {
+    background-color: white;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.075);
+}
+
+.name {
+    font-family: Quicksand;
+    font-size: 35px;
+    font-weight: 900;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+    color: rgb(23, 104, 66);
+}
+
+.gather-nav {
+    display: flex;
+    flex-direction: row;
+    padding-right: 6rem;
+}
+
+.nav-container {
+    display: flex;
+    gap: 40px;
+}
+
+.same {
+    margin-top: 7px;
+    position: relative;
+    transition: rgb(23, 104, 66) 0.3s ease-in-out;
+}
+
+.same::after {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: rgb(23, 104, 66);
+    transition: width 0.5s ease-in-out;
+}
+
+.same:hover::after {
+    width: 100%;
+}
+
+#hamburger-pic {
+    height: 30px;
+    margin-top: 10px;
+    transition: opacity .3s ease-in-out;
+    display: none;
+}
+/* AFTER NAV BAR */
+
+.main-show-div {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: rgb(214, 189, 136);
+    position: relative;
+    /* border: solid 1px blue; */
+}
+
+.details-div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    padding-left: 150px;
+    /* border: solid 1px blue; */
+}
+
+.james {
+    margin-top: 200px;
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.web {
+    font-size: 26px;
+    font-weight: 100;
+}
+
+.contact {
+    background-color: rgb(202, 86, 40);
+    color: white;
+    padding: .5rem 1.5rem;
+    border-radius: 5px;
+    margin-top: 50px;
+    transition: opacity 0.3s ease-in-out;
+    /* margin-left: -304px; */
+}
+
+.contact:hover {
+    opacity: .8;
+}
+
+.icon-div {
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
+}
+
+.icon-div > a > img {
+    width: 32px;
+   padding: 10px; 
+   transition: background-color 0.5s ease-in-out;
+}
+
+.icon-div > a > img:hover {
+    background-color: rgb(202, 86, 40);
+    border-radius: 5px;
+}
+
+.dp-div {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    transition: padding-left 0.3s ease-in-out;
+}
+
+.dp-div > div {
+    border-bottom: solid 2px black;
+}
+
+.dp-div > div > img {
+    height: 485px;
+    border-radius: 250px;   
+}
+
+
+/* MEDIA QUERIES */
+@media (min-width: 320px) and (max-width: 767px) {
+    
+    nav {
+        padding: 0px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100vw;
+    }
+
+    #hamburger-pic {
+        display: block;
+        margin-top: -1px;
+        transform: translateX(-20px);
+    }
+
+    .name {
+        font-size: 25px;
+        line-height: 22px;
+        padding-top: 5px;
+        padding-left: 10px;
+    }
+
+    .gather-nav {
+        padding-right: 0;
+        flex-direction: column;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        background-color: rgba(197, 85, 40, 0.384);
+        gap: 20px;
+        padding: 10px 10px 10px 10px ;
+        height: fit-content;
+        border-radius: 5px;
+        margin-left: -20px;
+        display: none;
+    }
+    
+    .same {
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1114px) {
+    body {
+        width: 100vw;
+    }
+    
+    nav {
+        width: 100%;
+    }   
+    
+    .nav-container {
+        gap: 25px;
+    }
+
+    .gather-nav {
+        padding-right: 5rem;
+    }
+}
+
+
+
+@media (min-width: 160px) and (max-width:319px) {
+    body {
+        width: 100vw;
+    }
+    
+    nav {
+        width: 100vw;
+        height: 30px;
+        padding: 0;
+        gap: 20px;
+        padding-top: 4px;
+    }
+
+    #hamburger-pic {
+        display: block;
+        margin-top: 0px;
+        height: 20px;
+    }
+
+    .name {
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .nav-container {
+        gap: 0;
+        display: none;
+    }
+
+}

@@ -1,0 +1,107 @@
+
+/* the queried nav */
+
+.overlay {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(23, 104, 66, 0.753);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+    transition: top 0.9s ease-in-out;
+}
+
+.nav-container-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.same-overlay {
+    font-size: 32px;
+    font-weight: 900;
+    color: white;
+    position: relative;
+}
+
+.same-overlay::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: rgb(202, 86, 40);
+    transition: width 0.5s ease-in-out;
+
+}
+
+.same-overlay:hover::after {
+    width: 100%;
+}
+
+.footer-gen-div-overlay {
+    width: 100%;
+    /* height: 30vh; */
+    background-color: transparent;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.footer-gen-div-overlay div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10%;
+}
+
+.footer-gen-div-overlay div a svg {
+    height: 55px;
+    transition: transform 0.3s ease-in-out;
+    color: white;
+}
+
+.footer-gen-div-overlay div a svg:hover {
+    transform: translateY(-10px);
+}
+
+
+
+@media (min-width: 160px) and (max-width:319px) {
+    .overlay {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .nav-container-overlay {
+        margin-top: 30px;
+        gap: 5px;
+    }
+
+    .same-overlay {
+        font-size: 10px;
+    }
+
+
+    .footer-gen-div-overlay {
+        gap: 5px;
+    }
+
+    .footer-gen-div-overlay div {
+        gap: 5px;
+        margin-top: 2%;
+    }
+
+    .footer-gen-div-overlay div a svg {
+        height: 20px;
+    }
+}

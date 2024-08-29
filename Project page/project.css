@@ -1,0 +1,154 @@
+.main-div {
+    height: fit-content;
+    background-color: rgb(214, 189, 136);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.project-heading {
+margin-top: 110px;
+font-size: 43px;
+text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+position: relative;
+}
+
+.project-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    border-top: solid 2px rgb(23, 104, 66);
+}
+
+.gen-content-div {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin-top: 55px;
+    gap: 30px;
+    
+}
+
+.gen-box {
+   flex: 1;
+   height: 340px;
+   background-color: white;
+   border-radius: 15px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.gen-box:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.img-div {
+    width: 100%;
+    height: 50%;
+}
+
+.img-div a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.heading {
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 8px;
+}
+
+.write-up {
+    font-size: 15px;
+    margin-top: 7px;
+}
+
+.button-footer {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-footer div {
+    background-color: rgb(23, 104, 66);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.button-footer div svg {
+    height: 20px;
+    color: white;
+}
+.button-footer div p {
+    font-size: 12px;
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .gen-content-div {
+        flex-direction: column;
+    }
+
+    .gen-box {
+        padding-bottom: 10px;
+    }
+
+    .write-up {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1114px) {
+    .gen-content-div {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .gen-box {
+        padding-bottom: 10px;
+    }
+
+    .write-up {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 160px) and (max-width: 319px) {
+    .project-heading {
+        font-size: 30px;
+        margin-top: 45px;
+    }
+
+    .gen-content-div {
+        width: 90%;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .gen-box {
+        padding-bottom: 10px;
+    }
+
+    .heading {
+        font-size: 15px;
+    }
+
+    .write-up {
+        font-size: 11px;
+    }
+}

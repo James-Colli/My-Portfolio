@@ -1,0 +1,1317 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, arial;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(./Fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url(./Fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+nav {
+    /* background-color: rgb(20, 15, 4); */
+    background-color: transparent;
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding: 1rem 3rem;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+nav.scrolled {
+    background-color: white;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.075);
+}
+
+.name {
+    font-family: Quicksand;
+    font-size: 35px;
+    font-weight: 900;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+    color: rgb(23, 104, 66);
+}
+
+.gather-nav {
+    display: flex;
+    flex-direction: row;
+    padding-right: 6rem;
+}
+
+.nav-container {
+    display: flex;
+    gap: 40px;
+}
+
+.same {
+    margin-top: 7px;
+    position: relative;
+    transition: rgb(23, 104, 66) 0.3s ease-in-out;
+}
+
+.same::after {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: rgb(23, 104, 66);
+    transition: width 0.5s ease-in-out;
+}
+
+.same:hover::after {
+    width: 100%;
+}
+
+#hamburger-pic {
+    height: 30px;
+    margin-top: 10px;
+    transition: opacity .3s ease-in-out;
+    display: none;
+}
+/* AFTER NAV BAR */
+
+.main-show-div {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: rgb(214, 189, 136);
+    position: relative;
+    /* border: solid 1px blue; */
+}
+
+.details-div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    padding-left: 150px;
+    /* border: solid 1px blue; */
+}
+
+.james {
+    margin-top: 200px;
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.web {
+    font-size: 26px;
+    font-weight: 100;
+}
+
+.contact {
+    background-color: rgb(202, 86, 40);
+    color: white;
+    padding: .5rem 1.5rem;
+    border-radius: 5px;
+    margin-top: 50px;
+    transition: opacity 0.3s ease-in-out;
+    /* margin-left: -304px; */
+}
+
+.contact:hover {
+    opacity: .8;
+}
+
+.icon-div {
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
+}
+
+.icon-div > a > img {
+    width: 32px;
+   padding: 10px; 
+   transition: background-color 0.5s ease-in-out;
+}
+
+.icon-div > a > img:hover {
+    background-color: rgb(202, 86, 40);
+    border-radius: 5px;
+}
+
+.dp-div {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    transition: padding-left 0.3s ease-in-out;
+}
+
+.dp-div > div {
+    border-bottom: solid 2px black;
+}
+
+.dp-div > div > img {
+    height: 485px;
+    border-radius: 250px;   
+}
+
+
+/* the queried nav */
+
+.overlay {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background-color: rgba(23, 104, 66, 0.753);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+    transition: top 0.9s ease-in-out;
+}
+
+.nav-container-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.same-overlay {
+    font-size: 32px;
+    font-weight: 900;
+    color: white;
+    position: relative;
+}
+
+.same-overlay::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: rgb(202, 86, 40);
+    transition: width 0.5s ease-in-out;
+
+}
+
+.same-overlay:hover::after {
+    width: 100%;
+}
+
+.footer-gen-div-overlay {
+    width: 100%;
+    /* height: 30vh; */
+    background-color: transparent;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.footer-gen-div-overlay div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10%;
+}
+
+.footer-gen-div-overlay div a svg {
+    height: 55px;
+    transition: transform 0.3s ease-in-out;
+    color: white;
+}
+
+.footer-gen-div-overlay div a svg:hover {
+    transform: translateY(-10px);
+}
+
+
+
+/* SERVICES DIV  */
+
+.services-gen-div {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(242, 247, 253);
+}
+
+.services, .recent-works, .skills, .latest-artcles {
+    margin-top: 100px;
+    font-size: 43px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+.services::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 21px;
+    width: 140px;
+    border-top: solid 2px rgb(23, 104, 66);
+}
+
+.services-contents {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.services-contents > div {
+    width: 380px;
+    height: 350px;
+    margin-top: 60px;
+    background-color: white;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: solid 2px blue; */
+}
+
+.services-contents > div:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.services-contents > div > img {
+    /* width: 30px; */
+    height: 35px;
+    margin-top: 50px;
+    color: rgb(202, 86, 40);
+}
+
+.services-contents > div > h3 {
+    margin-top: 20px;
+    position: relative;
+}
+
+.web-dev h3::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 43px;
+    width: 100px;
+    border-top: solid 2px rgb(23, 104, 66);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.web-dev:hover h3::after {
+    width: 135px;
+    left: 17px;
+}
+
+.app-dev h3::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 43px;
+    width: 100px;
+    border-top: solid 2px rgb(23, 104, 66);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.app-dev:hover h3::after {
+    width: 135px;
+    left: 17px;
+}
+
+.auto h3::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 30px;
+    width: 55px;
+    border-top: solid 2px rgb(23, 104, 66);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.auto:hover h3::after {
+    width: 90px;
+    left: 15px;
+}
+
+.services-contents > div > p {
+    margin-top: 30px;
+    font-weight: lighter;
+}
+
+/* RECENT WORKS DIV */
+/* .recent-works hAS same prop as .services so they re both 2geda up */
+
+.recent-works-gen-div {
+    width: 100%;
+    height: 120vh;
+    background-color: rgb(235, 225, 225);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recent-works::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    width: 140px;
+    border-top: solid 2px rgb(23, 104, 66);
+}
+
+.recent-works-pic-div {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    height: 460px;
+    width: 1200px;
+}
+
+.break1 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.child1 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 55%;
+}
+
+.child2 {
+    flex: 1;
+    display: flex;
+    gap: 25px;
+}
+
+.last-child1 {
+    flex: 1;
+    position: relative;
+}
+
+.last-child2 {
+    flex: 1;
+    position: relative;
+}
+
+.break2 {
+    /* width: 30%;
+    height: 100%; */
+    flex: 1;
+    border-radius: 10px;
+    position: relative;
+}
+
+.child1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.child2 div img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.break2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* hover effects */
+
+
+.gen-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(23, 104, 66, 0.712);
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mid-line {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    border: solid 2px white;
+    border-radius: 10px;
+}
+
+
+.gen-cover:hover {
+    opacity: 1;
+}
+
+.para-same {
+    color: white;
+    font-style: italic;
+}
+
+.hover-text1 {
+    color: white;
+    margin-top: 13%;
+}
+
+.hover-text2 {
+    color: white;
+    margin-top: 20%;
+}
+
+.hover-text3 {
+    color: white;
+    margin-top: 20%;
+}
+
+.hover-text4 {
+    color: white;
+    margin-top: 50%;
+}
+
+/* RECENT WORKS/ HOVER EFFECT STOPS HERE */
+
+/* SKILLS DIV  */
+/* .skills has same prop as .services so they re both 2geda up */
+
+.skills-gen-div {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: 70px;
+    border-top: solid 2px rgb(23, 104, 66);
+}
+
+.whole-container {
+    width: 70%;
+    height: 55%;
+    margin-top: 3%;
+    display: flex;
+    gap: 30px;
+}
+
+.frontend-div, .backend-div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 3%;
+}
+
+.ratio-detail1 {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.ratio-div {
+    height: 20px;
+    width: 100%;
+    background-color: rgb(230, 202, 195);
+    position: relative;
+    border-radius: 15px;
+}
+
+.ratio1 {
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(197, 85, 40);
+    border-radius: 15px;
+}
+
+.ratio2, .ratio3 {
+    height: 100%;
+    width: 75%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(197, 85, 40);
+    border-radius: 15px;
+}
+
+.ratio-detail2, .ratio-detail3 {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+/* BACKEND  */
+
+
+.ratio-detail4 {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.ratio4 {
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(197, 85, 40);
+    border-radius: 15px;
+}
+
+.ratio5, .ratio6 {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(197, 85, 40);
+    border-radius: 15px;
+}
+
+.ratio-detail5, .ratio-detail6 {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+/* LATEST ARTICLES */
+/* .latest artilces has same prop as .services so they re both 2geda up */
+
+.latest-articles-gen-div {
+    height: 115vh;
+    width: 100%;
+    background-color: rgb(235, 225, 225);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.latest-artcles::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 70px;
+    width: 160px;
+    border-top: solid 2px rgb(23, 104, 66);
+}
+
+.gen-collect-art-div {
+    height: 55%;
+    width: 80%;
+    margin-top: 5%;
+    display: flex;
+    gap: 32px;
+}
+
+.same-art-div {
+    background-color: white;
+    flex: 1;
+    border-radius: 10px;
+}
+
+.art-pic-div {
+    height: 50%;
+    width: 100%;
+    /* border: solid 2px green; */
+    transition: transform 0.3s ease-in-out;
+}
+
+.art-pic-div:hover {
+    transform: scale(1.02);
+}
+
+.art-pic-div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.art-write-div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    padding: 15px 12px 12px 12px;
+}
+
+.art-write-div h3 {
+    font-size: 22px;
+}
+
+.art-write-div p {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.art-write-div div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course {
+    background-color: rgb(87, 86, 86);
+    color: white;
+    font-size: 13px;
+    font-weight: 100;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* FOOTER  */
+
+.footer-gen-div {
+    width: 100%;
+    height: 30vh;
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.footer-gen-div div {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-top: 4%;
+}
+
+.footer-gen-div div a svg {
+    height: 35px;
+    transition: transform 0.3s ease-in-out;
+    color: white;
+}
+
+.footer-gen-div div a svg:hover {
+    transform: translateY(-10px);
+}
+
+.footer-gen-div p {
+    color: white;
+}
+
+#chevron-up {
+    height: 45px;
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    background-color: rgb(202, 86, 40);
+    padding: 5px;
+    border-radius: 5px;
+    position: fixed;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+/* SCROOL BAR CUSTOMIZATION */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(202, 86, 40);
+    border-radius: 5px;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 320px) and (max-width: 767px) {
+    
+    nav {
+        padding: 0px;
+    }
+
+    #hamburger-pic {
+        display: block;
+        margin-top: -1px;
+    }
+
+    .name {
+        font-size: 25px;
+        /* margin-right: 110px; */
+        line-height: 22px;
+        padding-top: 5px;
+        padding-left: 10px;
+    }
+
+    .gather-nav {
+        padding-right: 0;
+        flex-direction: column;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        background-color: rgba(197, 85, 40, 0.384);
+        gap: 20px;
+        padding: 10px 10px 10px 10px ;
+        height: fit-content;
+        border-radius: 5px;
+        display: none;
+    }
+    
+    .same {
+        font-size: 14px;
+    }
+    
+
+    /* NAVBAR STOPS HERE  */
+
+.main-show-div {
+    height: fit-content;
+    flex-direction: column-reverse;
+}
+
+.details-div {
+    width: 100vw;
+    padding-left: 0;
+    align-items: center;
+    border: none;
+}
+
+.dp-div {
+    width: 100vw;
+    height: fit-content;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+.dp-div > div {
+    align-items: center;
+    position: relative;
+    /* left: 50%; */
+}
+
+.dp-div > div > img {
+    height: 280px;
+}
+
+.james {
+    margin-top: 20px;
+    font-size: 27px;
+}
+
+.web {
+    font-size: 14px;
+}
+
+.contact {
+    padding: .3rem .7rem;
+    margin-top: 30px;
+}
+
+.icon-div {
+    gap: 10px;
+}
+
+
+
+/* SERVICES DIV  */
+
+.services-gen-div {
+    width: 100vw;
+    height: fit-content;
+}
+
+.services {
+    margin-top: 30px;
+}
+
+.services-contents {
+    flex-direction: column;
+    gap: 0;
+}
+
+.services-contents div {
+    width: 90vw;
+    height: fit-content;
+    margin-top: 30px;
+}
+
+.services-contents > div > p {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+/* RECENT WORKS  */
+
+.recent-works-gen-div {
+    width: 100vw;
+    height: fit-content;
+}
+
+.recent-works {
+    margin-top: 30px;
+    font-size: 40px;
+}
+
+.recent-works::after {
+    left: 65px;
+}
+
+.recent-works-pic-div {
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 10px;
+    height: fit-content;
+    width: 90vw;
+}
+
+.child2 {
+    flex-direction: column;
+}
+
+.break2 {
+    margin-bottom: 20px;
+}
+
+/* HOVER RECENT EFFECT */
+
+.hover-text2, .hover-text3, .hover-text4 {
+    margin-top: 15%;
+}
+
+/* RECENT WORKS FINNISHED */
+/* SKILLS DIV  */
+
+.skills-gen-div {
+    height: fit-content;
+    width: 100vw;
+}
+
+.skills {
+    margin-top: 30px;
+}
+
+.whole-container {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.frontend-div, .backend-div {
+    padding: 0;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.backend-div {
+    padding-bottom: 20px;
+}
+
+.ratio-div {
+    width: 90vw;
+}
+
+/* LATEST ARTICLE  */
+
+.latest-articles-gen-div {
+    height: fit-content;
+    width: 100vw;
+    padding-bottom: 30px;
+}
+
+.latest-artcles {
+    margin-top: 30px;
+    font-size: 35px;
+}
+
+.latest-artcles::after {
+    left: 42px;
+}
+
+.gen-collect-art-div {
+    flex-direction: column;
+    margin-top: 40px;
+    width: 90vw;
+}
+
+ /* FOOTER DIV  */
+
+ .footer-gen-div {
+    width: 100vw;
+ }
+
+ .footer-gen-div p {
+    text-align: center;
+ }
+
+ #chevron-up {
+    height: 25px;
+    bottom: 20px;
+    right: 5px;
+    padding: 2px;
+ }
+
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1114px) {
+    body {
+        width: 100vw;
+    }
+    
+    nav {
+        width: 100%;
+    }   
+    
+    .nav-container {
+        gap: 25px;
+    }
+
+    .gather-nav {
+        padding-right: 5rem;
+    }
+
+    /* AFTER NAVBAR */
+
+    .main-show-div {
+        width: 100vw;
+        flex-direction: row;
+        justify-content: center;
+    }
+ 
+
+    .details-div {
+        padding-left: 15px;
+        padding-bottom: 50px;
+        justify-content: center;
+    }
+
+    .james {
+        margin-top: 0;
+    }
+
+
+    .icon-div {
+        gap: 15px;
+    }
+
+    .dp-div {
+        position: relative;
+        left: 0;
+        /* top: -20px; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* SERVICES DIV  */
+    .services-gen-div {
+        width: 100vw;
+        height: fit-content;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+
+    .services-contents {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .services-contents div {
+        width: 600px;
+    }
+
+    .services-contents div p {
+        font-size: 25px;
+    }
+
+    /* RECENT WORKS DIV  */
+
+    .recent-works-gen-div {
+        width: 100vw;
+        height: fit-content;
+        padding-bottom: 40px;
+    }
+
+    .recent-works-pic-div {
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+    }
+
+    .hover-text1 {
+        margin-top: 20%;
+    }
+
+    .hover-text2, .hover-text3 {
+        margin-top: 15%;
+    }
+
+    .hover-text4 {
+        margin-top: 18%;
+    }
+
+    .hover-text1, .hover-text2, .hover-text3, .hover-text4 {
+        font-size: 25px;
+    }
+
+    .para-same {
+        font-size: 25px;
+    }
+
+    /* SKILLS DIV  */
+
+    .skills-gen-div {
+        width: 100vw;
+    }
+
+    /* LATEST ARTICLES  */
+
+    .latest-articles-gen-div {
+        width: 100vw;
+        height: max-content;
+        padding-bottom: 40px;
+    }
+
+    .gen-collect-art-div {
+        flex-direction: column;
+        width: 95vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .same-art-div {
+        width: 90%;
+        padding-bottom: 20px;
+    }
+
+    .art-write-div {
+        align-items: center;
+    }
+
+    .art-write-div h3 {
+        font-size: 28px;
+    }
+
+    .art-write-div p {
+        font-size: 22px;
+    }
+
+    .art-write-div div {
+        padding: 0 50px 0 50px;
+    }
+
+    /* footer div  */
+
+    .footer-gen-div {
+        width: 100vw;
+    }
+
+
+}
+
+
+
+@media (min-width: 160px) and (max-width:319px) {
+    body {
+        width: 100vw;
+    }
+    
+    nav {
+        width: 100vw;
+        height: 30px;
+        padding: 0;
+        gap: 20px;
+        padding-top: 4px;
+    }
+
+    #hamburger-pic {
+        display: block;
+        margin-top: 0px;
+        height: 20px;
+    }
+
+    .name {
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .nav-container {
+        gap: 0;
+        display: none;
+    }
+
+
+
+    /* navbar stops  */
+
+    .main-show-div {
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dp-div {
+        position: static;
+        margin-top: 40px;
+    }
+
+    .details-div {
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+
+    .dp-div div img {
+        height: 100px;
+    }
+
+    .james {
+        font-size: 16px;
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .web {
+        font-size: 13px;
+    }
+    
+    .contact {
+        padding: .5rem 1rem;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+
+
+
+
+    
+
+
+    .icon-div {
+            display: none;
+        }
+
+
+
+
+
+
+
+    .services-gen-div {
+        display: none;
+    }
+
+
+
+
+    .recent-works-gen-div {
+        display: none;
+    }
+
+
+
+    .skills-gen-div {
+        display: none;
+    }
+
+
+
+
+
+    .latest-articles-gen-div {
+        display: none;
+    }
+
+
+
+
+    .footer-gen-div {
+        display: none;
+    }
+
+
+    /* overlay query */
+
+    
+    .overlay {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .nav-container-overlay {
+        margin-top: 30px;
+        gap: 5px;
+    }
+
+    .same-overlay {
+        font-size: 10px;
+    }
+
+
+    .footer-gen-div-overlay {
+        gap: 5px;
+    }
+
+    .footer-gen-div-overlay div {
+        gap: 5px;
+        margin-top: 2%;
+    }
+
+    .footer-gen-div-overlay div a svg {
+        height: 20px;
+    }
+    
+} 
