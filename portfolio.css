@@ -775,6 +775,7 @@ nav.scrolled {
     #hamburger-pic {
         display: block;
         margin-top: -1px;
+        object-fit: cover;
     }
 
     .name {
